@@ -102,6 +102,13 @@ hr {
 	padding-left: 10px;
 }
 
+#photo-select {
+	display: flex;
+	margin-left: 30%;
+	/* Stack the elements vertically */
+	margin-top: 20px;
+}
+
 /*Input section end*/
 /*Date of birth section start*/
 .sub_title_2 {

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
@@ -22,6 +22,64 @@
 		<button type="submit">POST</button>
 
 	</form>
+</body>-->
+<!--</html>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>KodBbook - Create Post</title>
+	<link rel="stylesheet" href="signUp.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="row res">
+		<div class="fb-form res">
+
+			<!--Facebook Signup from start-->
+			<div class="main">
+
+				<form id="profileForm" action="/createPost" method="post" enctype="multipart/form-data">
+					<div class="title-container">
+						<h1>KodBook</h1>
+						<hr/>
+						<h2 class="first_title">Create Post</h2>
+						
+					</div>					
+					<hr />
+					<!--Input section start-->
+					<div class="input">
+						<!--<input type="text" name="" placeholder="First Name" class="first_name" id="all" required />
+          				<input type="text" placeholder="Sure Name" class="sure_name" id="all" required />-->
+						
+						<textarea name="caption" placeholder="Add caption" id="all1" required ></textarea>
+						<br>
+						<input type="file" name="photo" accept="image/*" id="photo-select" required/>
+						
+						<br />
+						
+					</div>
+					
+					
+					<br />
+					
+					<input type="submit" value="CREATE POST" class="submit" />
+					
+					
+				</form>
+			</div>
+
+
+			
+
 </body>
 
 </html>
+
