@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>KodBbook - Sign up Page</title>
+	<link rel="stylesheet" href="signUp.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="row res">
+		<div class="fb-form res">
+
+			<!--Facebook Signup from start-->
+			<div class="main">
+
+				<form action="/signUp" method="post">
+					<div class="title-container">
+						<h1>KodBook</h1>
+						<hr/>
+						<h2 class="first_title">Sign Up</h2>
+						<p class="first_sub_title" id="sub_title">It's quick and easy.</p>
+					</div>					
+					<hr />
+					<!--Input section start-->
+					<div class="input">
+						<!--<input type="text" name="" placeholder="First Name" class="first_name" id="all" required />
+          				<input type="text" placeholder="Sure Name" class="sure_name" id="all" required />-->
+						<input type="text" name="username" placeholder="Username" id="all1" required />
+						<br />
+						<input type="email" name="email" placeholder="Email address" id="all1" required />
+						<br />
+						<input type="password" name="password" placeholder="New password" id="all1" required />
+						<br />
+					</div>
+					<!--Input section end-->
+					<!--Date of Birth section start-->
+					<p class="sub_title_2" id="sub_title" >Date of Birth</p>
+					<input type="date" name="dob" id="all"/> 
+					<!--Date of Birth section end-->
+					<br />
+					<!--Gender section start-->
+					<p class="sub_title_3" id="sub_title">Gender</p>
+					<div class="female" id="all_gender">
+						<label for="female"><b>Female</b> </label>
+						<input type="radio" name="gender" value="female" />
+					</div>
+					<div class="male" id="all_gender">
+						<label for="male"><b>Male</b></label>
+						<input type="radio" name="gender" value="male" />
+					</div>
+					<div class="other" id="all_gender">
+						<label for="other"><b>Custom</b></label>
+						<input type="radio" name="gender" value="other" />
+					</div>
+					<!--Gender section end-->
+					<br />
+					<p class="sub_title_4">
+						By clicking Sign Up, you agree to our <a href="#"> Terms, Data Policy</a> and
+						<a href="">Cookie</a>
+						Policy. You may receive SMS notifications from us and can opt out at any time.
+					</p>
+					<input type="submit" value="Sign Up" class="submit" />
+					<hr />
+					<div class="login-container">
+						<h3>Already have an account?</h3>
+						<a href="/">Login</a>
+					</div>
+				</form>
+			</div>
+
+
+			<script>
+				// JavaScript to display the current date in the Date of Birth section
+				window.onload = function () {
+					// Get today's date
+					const today = new Date();
+					const currentDay = today.getDate();
+					const currentMonth = today.getMonth(); // Months are 0-based in JavaScript
+					const currentYear = today.getFullYear();
+
+					// Get the select elements
+					const daySelect = document.getElementById('daySelect');
+					const monthSelect = document.getElementById('monthSelect');
+					const yearSelect = document.getElementById('yearSelect');
+
+					// Populate day options (1 to 31)
+					for (let day = 1; day <= 31; day++) {
+						let option = document.createElement('option');
+						option.value = day;
+						option.text = day;
+						if (day === currentDay) option.selected = true; // Set current day as selected
+						daySelect.appendChild(option);
+					}
+
+					// Populate month options (January to December)
+					const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+					for (let month = 0; month < months.length; month++) {
+						let option = document.createElement('option');
+						option.value = month;
+						option.text = months[month];
+						if (month === currentMonth) option.selected = true; // Set current month as selected
+						monthSelect.appendChild(option);
+					}
+
+					// Populate year options (You can customize the range as per your requirement)
+					const startYear = currentYear - 100; // Display last 100 years
+					for (let year = startYear; year <= currentYear; year++) {
+						let option = document.createElement('option');
+						option.value = year;
+						option.text = year;
+						if (year === currentYear) option.selected = true; // Set current year as selected
+						yearSelect.appendChild(option);
+					}
+				};
+			</script>
+
+</body>
+
+</html>
