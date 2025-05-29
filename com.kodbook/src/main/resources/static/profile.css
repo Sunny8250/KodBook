@@ -61,12 +61,19 @@ nav a:hover {
 .profile-details p {
     color: #2A2A2A;
     font-size: 1.1em;
-    margin-bottom: 47px;
+    margin-bottom: 10px;
+    margin-top: 50px;
 }
 
 /* Like and Comment form */
 form {
     margin-top: 10px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    width: 400px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    
 }
 
 input[type="submit"] {
